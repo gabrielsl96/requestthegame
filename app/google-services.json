@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "651882983813",
+    "firebase_url": "https://request-the-game-14d13.firebaseio.com",
+    "project_id": "request-the-game-14d13",
+    "storage_bucket": "request-the-game-14d13.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:651882983813:android:04bf240ef9d28b79d694ec",
+        "android_client_info": {
+          "package_name": "com.example.request_thegame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "651882983813-457jddfivo4qf85n5mp66oqi8268l8g9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.request_thegame",
+            "certificate_hash": "c0b45626454c201f5822db48fc6faebc62e64509"
+          }
+        },
+        {
+          "client_id": "651882983813-t8ru5lp0rhd1vuiogjv8hbtqav4u5jiq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0ZPNeCxE8ef_NXnzkR8xylL9pPnR7GVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "651882983813-t8ru5lp0rhd1vuiogjv8hbtqav4u5jiq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

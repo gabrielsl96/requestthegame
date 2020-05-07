@@ -1,0 +1,9 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background normal-->
+    <item android:drawable="@color/colorPrimary"/>
+    <!-- Cor ao pressionar-->
+    <item android:drawable="@color/colorPrimaryDark" android:state_pressed="true"/>
+    <!-- Cor foco -->
+    <item android:drawable="@color/colorAccent" android:state_focused="true"/>
+</selector>
