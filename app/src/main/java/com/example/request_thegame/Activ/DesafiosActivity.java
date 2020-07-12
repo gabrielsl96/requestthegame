@@ -3,29 +3,20 @@ package com.example.request_thegame.Activ;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager.widget.ViewPager;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import com.example.request_thegame.Config.ConfiguracaoFirebase;
-import com.example.request_thegame.Frag.DiaTresFragment;
-import com.example.request_thegame.Frag.DiaUmFragment;
-import com.example.request_thegame.Frag.DiasDoisFragment;
-import com.example.request_thegame.Frag.DiasQuatroFragment;
+import com.example.request_thegame.Frag.DiasDesafios.DiaTresFragment;
+import com.example.request_thegame.Frag.DiasDesafios.DiaUmFragment;
+import com.example.request_thegame.Frag.DiasDesafios.DiasDoisFragment;
+import com.example.request_thegame.Frag.DiasDesafios.DiasQuatroFragment;
 import com.example.request_thegame.Frag.EstatisticasFragment;
-import com.example.request_thegame.Model.DiasDesafios;
 import com.example.request_thegame.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.ValueEventListener;
 
 public class DesafiosActivity extends AppCompatActivity {
 

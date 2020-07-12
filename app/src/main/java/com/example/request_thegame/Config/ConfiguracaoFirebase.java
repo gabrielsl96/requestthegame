@@ -47,11 +47,6 @@ public class ConfiguracaoFirebase {
         return referenceStorage;
     }
 
-    public static DatabaseReference getReferenceGio() {
-        referenceGio=FirebaseDatabase.getInstance().getReference("path/to/geofire");
-        return referenceGio;
-    }
-
     public static FirebaseUser getFirebaseUser(){
         user = ConfiguracaoFirebase.getFirebaseAuth().getCurrentUser();
         return getFirebaseUser();

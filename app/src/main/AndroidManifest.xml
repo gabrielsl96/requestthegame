@@ -14,26 +14,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activ.PrimeiroAcesso"></activity>
+        <activity android:name=".Activ.LoginUsuarioActivity"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key" />
 
-        <activity android:name=".Activ.SplashScreenActivity" />
-        <activity android:name=".Activ.BloqueioTemporarioActivity" />
-        <activity android:name=".Activ.MainActivity">
+        <activity android:name=".Activ.SplashScreenActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".Activ.PrimeiroAcesso" />
+        <activity android:name=".Activ.BloqueioTemporarioActivity" />
+        <activity android:name=".Activ.DiaDoisQuizActivity" />
+        <activity android:name=".Activ.MainActivity"/>
         <activity
             android:name=".Activ.DesafiosActivity"
-            android:parentActivityName=".Activ.MainActivity"></activity>
+            android:parentActivityName=".Activ.MainActivity" />
 
-        <receiver android:name=".Frag.DiaUmFragment$GeofenceBroadcastReceiver" />
+        <receiver android:name=".Helper.GeofenceBroadcastReceiver" />
     </application>
 
 </manifest>

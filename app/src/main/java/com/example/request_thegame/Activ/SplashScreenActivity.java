@@ -24,14 +24,10 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if(auth.getCurrentUser()==null){
-                    startActivity(new Intent(SplashScreenActivity.this,BloqueioTemporarioActivity.class));
+
+                    startActivity(new Intent(SplashScreenActivity.this, LoginUsuarioActivity.class));
                     finish();
-                }
-                else {
-                    startActivity(new Intent(SplashScreenActivity.this,MainActivity.class));
-                    finish();
-                }
+
             }
         }, 2000);
     }

@@ -31,27 +31,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.request_thegame.Activ.PrimeiroAcesso" />
+        <activity android:name="com.example.request_thegame.Activ.LoginUsuarioActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key" />
 
-        <activity android:name="com.example.request_thegame.Activ.SplashScreenActivity" />
-        <activity android:name="com.example.request_thegame.Activ.BloqueioTemporarioActivity" />
-        <activity android:name="com.example.request_thegame.Activ.MainActivity" >
+        <activity android:name="com.example.request_thegame.Activ.SplashScreenActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.request_thegame.Activ.PrimeiroAcesso" />
+        <activity android:name="com.example.request_thegame.Activ.BloqueioTemporarioActivity" />
+        <activity android:name="com.example.request_thegame.Activ.DiaDoisQuizActivity" />
+        <activity android:name="com.example.request_thegame.Activ.MainActivity" />
         <activity
             android:name="com.example.request_thegame.Activ.DesafiosActivity"
             android:parentActivityName="com.example.request_thegame.Activ.MainActivity" />
 
-        <receiver android:name="com.example.request_thegame.Frag.DiaUmFragment$GeofenceBroadcastReceiver" />
+        <receiver android:name="com.example.request_thegame.Helper.GeofenceBroadcastReceiver" />
 
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
