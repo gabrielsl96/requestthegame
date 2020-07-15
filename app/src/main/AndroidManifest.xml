@@ -2,10 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.request_thegame">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
     <application
         android:allowBackup="true"
@@ -14,27 +16,48 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activ.LoginUsuarioActivity"></activity>
 
+        <receiver android:name=".Broadcast.BroadcastListenerDesafio">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".Services.ServiceListenerDesafio"/>
+
+        <receiver android:name=".Broadcast.BroadcastListenerDesafioClosed">
+            <intent-filter>
+                <action android:name="VERIFICANDO"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+
+        <activity android:name=".Activ.desafios.DesafioQuatroActivity" />
+        <activity android:name=".Activ.desafios.DesafioTresActivity" />
+        <activity android:name=".Activ.desafios.DesafioDoisActivity" />
+        <activity android:name=".Activ.desafios.DesafioUmActivity" />
+
+        <!--Api do google-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/api_key" />
 
+        <activity android:name=".Activ.CriarDesafiosActivity">
+        </activity>
+        <activity android:name=".Activ.PainelDesafiosActivity"
+            />
+        <activity android:name=".Activ.MainActivity"
+            android:theme="@style/AppTheme.StatusBarDark">
+        </activity>
+        <activity android:name=".Activ.LoginActivity">
+        </activity>
         <activity android:name=".Activ.SplashScreenActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activ.PrimeiroAcesso" />
-        <activity android:name=".Activ.BloqueioTemporarioActivity" />
-        <activity android:name=".Activ.DiaDoisQuizActivity" />
-        <activity android:name=".Activ.MainActivity"/>
-        <activity
-            android:name=".Activ.DesafiosActivity"
-            android:parentActivityName=".Activ.MainActivity" />
-
-        <receiver android:name=".Helper.GeofenceBroadcastReceiver" />
     </application>
 
 </manifest>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+    android:id="@+id/item_primeiro_desafio"
+    android:icon="@drawable/ic_baseline_question_answer_24"
+    android:title="Primeiro" />
+
+    <item
+        android:id="@+id/item_segundo_desafio"
+        android:icon="@drawable/ic_baseline_question_answer_24"
+        android:title="Segundo" />
+
+    <item
+        android:id="@+id/item_terceiro_desafio"
+        android:icon="@drawable/ic_baseline_place_24"
+        android:title="Terceiro" />
+
+    <item
+        android:id="@+id/item_quarto_desafio"
+        android:icon="@drawable/ic_baseline_place_24"
+        android:title="Quarto" />
+
+
+</menu>

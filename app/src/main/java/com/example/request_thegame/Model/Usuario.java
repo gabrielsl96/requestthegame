@@ -1,80 +1,80 @@
 package com.example.request_thegame.Model;
 
-import android.net.Uri;
+import android.graphics.Bitmap;
 
 import com.google.firebase.database.Exclude;
 
-public class Usuario {
+import java.io.Serializable;
 
-    private String id, nome, email, senha, tipo;
-    private Uri uri_foto;
+public class Usuario implements Serializable {
+
+    private String idUsuario;
+    private Bitmap foto;
+    private String desafio;
+    private String nomeUsuario;
+    private String emailUsuario;
+    private String senhaUsuario;
+    private String tipoUsuario;
 
     public Usuario() {
-
-    }
-
-    public Usuario(final String nome, final String email, final String senha, final String tipo) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.tipo = tipo;
-    }
-
-    public Usuario(final String id, final String nome, final String email, final String senha, final String tipo, final Uri uri_foto) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.tipo = tipo;
-        this.uri_foto = uri_foto;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     @Exclude
-    public String getSenha() {
-        return senha;
+    public String getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setSenha(String senha) {
-        this.senha = senha;
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public String getTipo() {
-        return tipo;
+    @Exclude
+    public Bitmap getFoto() {
+        return foto;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setFoto(Bitmap foto) {
+        this.foto = foto;
     }
 
-    public Uri getUri_foto() {
-        return uri_foto;
+    public String getDesafio() {
+        return desafio;
     }
 
-    public void setUri_foto(Uri uri_foto) {
-        this.uri_foto = uri_foto;
+    public void setDesafios(String desafio) {
+        this.desafio = desafio;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getEmailUsuario() {
+        return emailUsuario;
+    }
+
+    public void setEmailUsuario(String emailUsuario) {
+        this.emailUsuario = emailUsuario;
+    }
+
+    @Exclude
+    public String getSenhaUsuario() {
+        return senhaUsuario;
+    }
+
+    public void setSenhaUsuario(String senhaUsuario) {
+        this.senhaUsuario = senhaUsuario;
+    }
+
+    public String getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(String tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 }

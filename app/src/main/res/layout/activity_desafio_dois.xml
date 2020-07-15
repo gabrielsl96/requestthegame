@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".Activity.desafios.DesafioDoisActivity">
+
+
+    <TextView
+        android:id="@+id/text_cronometro_dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/titulo_perguntas_dois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="Título das perguntas:"
+        android:textAlignment="viewStart"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/radio_group_dois"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_dois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_resposta_dois"
+        app:layout_constraintTop_toBottomOf="@+id/titulo_perguntas_dois"
+        tools:layout_editor_absoluteX="10dp">
+
+        <RadioButton
+            android:id="@+id/respostaUm_dois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resposta 1" />
+
+        <RadioButton
+            android:id="@+id/respostaDois_dois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resposta 2" />
+
+        <RadioButton
+            android:id="@+id/respostaTres_dois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resposta 3" />
+
+        <RadioButton
+            android:id="@+id/respostaQuatro_dois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resposta 4" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_resposta_dois"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Próxima pergunta"
+        android:backgroundTint="@color/colorAccent"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radio_group_dois"
+        tools:layout_editor_absoluteX="-9dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

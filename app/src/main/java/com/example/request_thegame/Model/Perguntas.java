@@ -1,19 +1,24 @@
 package com.example.request_thegame.Model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Perguntas {
+public class Perguntas implements Serializable {
+
     private String pergunta;
-    private List<String> listRespostas=new ArrayList<>();
+    private List<String> respostas =new ArrayList<>();
     private int respostaCerta;
 
-    public Perguntas(String pergunta, String respotaUm,String respostaDois,String respostaTres,String respostaQuatro, int respostaCerta) {
+    public Perguntas() {
+    }
+
+    public Perguntas(String pergunta, String respotaUm, String respostaDois, String respostaTres, String respostaQuatro, int respostaCerta) {
         this.pergunta = pergunta;
-        this.listRespostas.add(respotaUm);
-        this.listRespostas.add(respostaDois);
-        this.listRespostas.add(respostaTres);
-        this.listRespostas.add(respostaQuatro);
+        this.respostas.add(respotaUm);
+        this.respostas.add(respostaDois);
+        this.respostas.add(respostaTres);
+        this.respostas.add(respostaQuatro);
         this.respostaCerta = respostaCerta;
     }
     public String getPergunta(){
@@ -21,9 +26,22 @@ public class Perguntas {
     }
 
     public List<String> getRespostas(){
-        return this.listRespostas;
+        return this.respostas;
     }
     public int getRespostaCerta(){
         return this.respostaCerta;
+    }
+
+    public void setPergunta(String pergunta) {
+        this.pergunta = pergunta;
+    }
+
+
+    public void setRespostas(List<String> respostas) {
+        this.respostas = respostas;
+    }
+
+    public void setRespostaCerta(int respostaCerta) {
+        this.respostaCerta = respostaCerta;
     }
 }

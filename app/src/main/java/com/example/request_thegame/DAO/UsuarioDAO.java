@@ -1,125 +1,118 @@
 package com.example.request_thegame.DAO;
 
+import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
-import android.net.Uri;
-import android.util.Log;
-import android.widget.Toast;
+import android.content.Intent;
+import android.graphics.Bitmap;
+
 import androidx.annotation.NonNull;
-import com.example.request_thegame.Config.ConfiguracaoFirebase;
+
+import com.example.request_thegame.Activ.MainActivity;
+import com.example.request_thegame.Helper.ConfigFirebase;
+import com.example.request_thegame.Helper.ProgressBarLoad;
 import com.example.request_thegame.Model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthEmailException;
-import com.google.firebase.auth.FirebaseAuthUserCollisionException;
-import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
+import java.io.ByteArrayOutputStream;
 
 public class UsuarioDAO {
+    private static DatabaseReference reference = ConfigFirebase.getDatabaseReference();
+    private static FirebaseAuth auth = ConfigFirebase.getFirebaseAuth();
+    private static StorageReference storage = ConfigFirebase.getStorageReference();
+    private Dialog dialog;
 
-    private FirebaseAuth auth = ConfiguracaoFirebase.getFirebaseAuth();
-    private FirebaseUser user=getCurrentUser();
-    private DatabaseReference dtReference=ConfiguracaoFirebase.getReferenceDatabase();
+    public void create(final Context context, final Activity activity, final Usuario usuario){
+        final ProgressBarLoad load = new ProgressBarLoad(context,dialog);
+        load.iniciar();
 
 
-    public static FirebaseUser getCurrentUser(){
-        FirebaseAuth usuario= ConfiguracaoFirebase.getFirebaseAuth();
-        return usuario.getCurrentUser();
-    }
-
-    public void criarUsuario(final Usuario u, final Context c){
-            auth.createUserWithEmailAndPassword(
-                    u.getEmail(),
-                    u.getSenha()
-            ).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                @Override
-                public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (task.isSuccessful()) {
-                        atualizarNomeUsuario(String.valueOf(u.getNome()));
-                        u.setId(auth.getUid());
-                        updateUserDatabase(u);
+        usuario.setIdUsuario(auth.getCurrentUser().getUid());
+        reference
+                .child("Usuários")
+                .child(auth.getUid())
+                .setValue(usuario)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        salvarAtualizarImagemUsuario(context,activity,usuario.getFoto(),storage,auth,load);
+                        atualizarStatusDesafio(usuario);
                     }
-                    else{
-                        String excecao="";
-                        try{
-                            throw task.getException();
-                        } catch(FirebaseAuthUserCollisionException e){
-                            excecao="Já existe um usuário com esse endereço de email";
-                        }catch(FirebaseAuthWeakPasswordException e){
-                            excecao = "Digite uma senha com no mínimo 6 caracteres";
-                        }catch(Exception e){
-                            excecao="Erro ao cadastrar:"+e.getMessage();
-                        }
-
-                        Toast.makeText(c,
-                                excecao,
-                                Toast.LENGTH_LONG).show();
-                    }
-                }
-
-            });
+                });
 
     }
 
-    private boolean atualizarNomeUsuario(String nome){
+    public static Usuario reload(final Context context, final Usuario usuario){
+        final FirebaseAuth auth=ConfigFirebase.getFirebaseAuth();
+        DatabaseReference reference=ConfigFirebase.getDatabaseReference();
+
+
+
+        return usuario;
+    }
+
+    private boolean salvarAtualizarImagemUsuario(final Context context, final Activity activity, Bitmap imagemUsuario, StorageReference storage, final FirebaseAuth auth, final ProgressBarLoad load){
+
+        String idUsuario = auth.getCurrentUser().getUid();
 
         try{
+            ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            imagemUsuario.compress(Bitmap.CompressFormat.JPEG,100,baos);
+            byte[] dataImagem = baos.toByteArray();
 
-            UserProfileChangeRequest profile =new UserProfileChangeRequest.Builder().
-                    setDisplayName(nome)
-                    .build();
-            user.updateProfile(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+            //Pega a intancia do Storage Firebase e salva o arquivo
+           final StorageReference reference= storage.child("Fotos")
+                    .child("Perfil")
+                    .child(idUsuario)
+                    .child("foto-usuario.jpg");
+
+            final UploadTask uploadTask = reference.putBytes(dataImagem);
+            uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
                 @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    if(!task.isSuccessful()){
-                        Log.d("Erro","Erro ao atualizar nome de Usuário!");
-                    }
-                }
-            });
-            return true;
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-
-    }
-
-    private boolean atualizarFotoUsuario(Uri uri){
-        try{
-            UserProfileChangeRequest profile = new UserProfileChangeRequest.Builder().
-                    setPhotoUri(uri)
-                    .build();
-            user.updateProfile(profile).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
+                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
                     if(task.isSuccessful()){
-                        Log.d("Sucesso", "Sucesso ao atualizar imagem do usuário!");
+                        load.finalizar();
+                        context.startActivity(new Intent(context, MainActivity.class));
+                        activity.finish();
+                    }
+
+                    else{
+                        load.finalizar();
+                        try {
+                            throw task.getException();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
             });
+
             return true;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
     }
 
-    private boolean updateUserDatabase(Usuario u){
-        try {
-            dtReference.child("Usuarios")
-                    .child(u.getId())
-                    .setValue(u);
-            return true;
-        }
-        catch (Exception e){
-            e.printStackTrace();
-            return false;
-        }
-    }
+    private void atualizarStatusDesafio(Usuario usuario){
 
+        if(usuario.getDesafio()!=null) {
+
+            String [] desafio = usuario.getDesafio().split("/");
+
+            reference
+                    .child("Desafios")
+                    .child(desafio[0])
+                    .child(desafio[1])
+                    .child("statusDesafios")
+                    .child("statusDesafio")
+                    .setValue("Primeiro acesso");
+        }
+
+    }
 }

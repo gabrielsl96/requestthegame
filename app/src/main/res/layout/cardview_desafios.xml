@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardview_desafios"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desafio:" />
+
+        <TextView
+            android:id="@+id/text_id_desafio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="XXXXXX"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desafiado(a):" />
+
+        <TextView
+            android:id="@+id/text_nome_desafiado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="XXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status do desafio:"/>
+
+            <TextView
+                android:id="@+id/text_status_desafio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="XXXXXXXXX"/>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:columnCount="4">
+
+            <ProgressBar
+                android:id="@+id/progressbar1"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="93dp"
+                android:layout_marginRight="3dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressbar2"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_marginRight="3dp"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressbar3"
+                android:layout_marginRight="3dp"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progressbar4"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content" />
+        </GridLayout>
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

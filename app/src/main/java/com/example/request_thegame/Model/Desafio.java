@@ -1,89 +1,101 @@
 package com.example.request_thegame.Model;
 
-public class Desafio {
-    private String id;
-    private String desafiante;
-    private String desafiado;
-    private String iniciou;
-    private String diaTeste;
-    private String diaUm;
-    private String diaDois;
-    private String diaTres;
-    private String diaQuatro;
+import com.example.request_thegame.Model.desafio.InformacoesDesafio;
+import com.example.request_thegame.Model.desafio.MensagemFinal;
+import com.example.request_thegame.Model.desafio.PrimeiroDesafio;
+import com.example.request_thegame.Model.desafio.QuartoDesafio;
+import com.example.request_thegame.Model.desafio.SegundoDesafio;
+import com.example.request_thegame.Model.desafio.StatusDesafio;
+import com.example.request_thegame.Model.desafio.TerceiroDesafio;
+
+import java.io.Serializable;
+
+public class Desafio implements Serializable {
+
+    private String codigoDesafio;
+    private InformacoesDesafio informacoesDesafio;
+    private StatusDesafio statusDesafios;
+    private PrimeiroDesafio primeiroDesafio;
+    private SegundoDesafio segundoDesafio;
+    private TerceiroDesafio terceiroDesafio;
+    private QuartoDesafio quartoDesafio;
+    private MensagemFinal mensagemFinal;
 
     public Desafio() {
-
     }
 
-    public String getId() {
-        return id;
+    public Desafio(String codigoDesafio, InformacoesDesafio informacoesDesafio, StatusDesafio statusDesafios, PrimeiroDesafio primeiroDesafio, SegundoDesafio segundoDesafio, TerceiroDesafio terceiroDesafio, QuartoDesafio quartoDesafio, MensagemFinal mensagemFinal) {
+        this.codigoDesafio = codigoDesafio;
+        this.informacoesDesafio = informacoesDesafio;
+        this.statusDesafios = statusDesafios;
+        this.primeiroDesafio = primeiroDesafio;
+        this.segundoDesafio = segundoDesafio;
+        this.terceiroDesafio = terceiroDesafio;
+        this.quartoDesafio = quartoDesafio;
+        this.mensagemFinal = mensagemFinal;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getCodigoDesafio() {
+        return codigoDesafio;
     }
 
-    public String getDesafiante() {
-        return desafiante;
+    public void setCodigoDesafio(String codigoDesafio) {
+        this.codigoDesafio = codigoDesafio;
     }
 
-    public void setDesafiante(String desafiante) {
-        this.desafiante = desafiante;
+    public InformacoesDesafio getInformacoesDesafio() {
+        return informacoesDesafio;
     }
 
-    public String getDesafiado() {
-        return desafiado;
+    public void setInformacoesDesafio(InformacoesDesafio informacoesDesafio) {
+        this.informacoesDesafio = informacoesDesafio;
     }
 
-    public void setDesafiado(String desafiado) {
-        this.desafiado = desafiado;
+    public StatusDesafio getStatusDesafios() {
+        return statusDesafios;
     }
 
-    public String getIniciou() {
-        return iniciou;
+    public void setStatusDesafios(StatusDesafio statusDesafios) {
+        this.statusDesafios = statusDesafios;
     }
 
-    public void setIniciou(String iniciou) {
-        this.iniciou = iniciou;
+    public PrimeiroDesafio getPrimeiroDesafio() {
+        return primeiroDesafio;
     }
 
-    public String getDiaTeste() {
-        return diaTeste;
+    public void setPrimeiroDesafio(PrimeiroDesafio primeiroDesafio) {
+        this.primeiroDesafio = primeiroDesafio;
     }
 
-    public void setDiaTeste(String diaTeste) {
-        this.diaTeste = diaTeste;
+    public SegundoDesafio getSegundoDesafio() {
+        return segundoDesafio;
     }
 
-    public String getDiaUm() {
-        return diaUm;
+    public void setSegundoDesafio(SegundoDesafio segundoDesafio) {
+        this.segundoDesafio = segundoDesafio;
     }
 
-    public void setDiaUm(String diaUm) {
-        this.diaUm = diaUm;
+    public TerceiroDesafio getTerceiroDesafio() {
+        return terceiroDesafio;
     }
 
-    public String getDiaDois() {
-        return diaDois;
+    public void setTerceiroDesafio(TerceiroDesafio terceiroDesafio) {
+        this.terceiroDesafio = terceiroDesafio;
     }
 
-    public void setDiaDois(String diaDois) {
-        this.diaDois = diaDois;
+    public QuartoDesafio getQuartoDesafio() {
+        return quartoDesafio;
     }
 
-    public String getDiaTres() {
-        return diaTres;
+    public void setQuartoDesafio(QuartoDesafio quartoDesafio) {
+        this.quartoDesafio = quartoDesafio;
     }
 
-    public void setDiaTres(String diaTres) {
-        this.diaTres = diaTres;
+    public MensagemFinal getMensagemFinal() {
+        return mensagemFinal;
     }
 
-    public String getDiaQuatro() {
-        return diaQuatro;
-    }
-
-    public void setDiaQuatro(String diaQuatro) {
-        this.diaQuatro = diaQuatro;
+    public void setMensagemFinal(MensagemFinal mensagemFinal) {
+        this.mensagemFinal = mensagemFinal;
     }
 }

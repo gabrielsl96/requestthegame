@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginRight="@dimen/margin_input"
+    android:layout_marginLeft="@dimen/margin_input"
+    android:layout_marginTop="10dp"
+    tools:context=".Fragment.criar_desafios.CriarPrimeiroDesafioFragment"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Primeiro Desafio"
+            android:textSize="@dimen/titulo_fragment_criar_desafios"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Quiz"
+            android:textSize="@dimen/subtitulo_fragment_criar_desafios"
+            app:layout_constraintBottom_toTopOf="@+id/input_titulo_pergunta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_titulo_pergunta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_question_answer_24"
+            android:drawablePadding="5dp"
+            android:hint="Titulo pergunta"
+            android:inputType="textShortMessage"
+            app:layout_constraintBottom_toTopOf="@+id/input_respostaA"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_respostaA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawablePadding="5dp"
+            android:hint="Resposta A"
+            android:inputType="textShortMessage"
+            app:layout_constraintBottom_toTopOf="@+id/input_respostaB"
+            app:layout_constraintTop_toBottomOf="@+id/input_titulo_pergunta" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_respostaB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawablePadding="5dp"
+            android:hint="Resposta B"
+            android:inputType="textShortMessage"
+            app:layout_constraintBottom_toTopOf="@+id/input_respostaC"
+            app:layout_constraintTop_toBottomOf="@+id/input_respostaA" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_respostaC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawablePadding="5dp"
+            android:hint="Resposta C"
+            android:inputType="textShortMessage"
+            app:layout_constraintBottom_toTopOf="@+id/input_respostaD"
+            app:layout_constraintTop_toBottomOf="@+id/input_respostaB" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_respostaD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:drawableLeft="@drawable/ic_baseline_arrow_right_24"
+            android:drawablePadding="5dp"
+            android:hint="Resposta D"
+            android:inputType="textShortMessage"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/input_respostaC" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resposta correta"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input_respostaD" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/btn_adcionar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <RadioButton
+                android:id="@+id/radio_A"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="A" />
+
+            <RadioButton
+                android:id="@+id/radio_B"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="B" />
+
+            <RadioButton
+                android:id="@+id/radio_C"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="C" />
+
+            <RadioButton
+                android:id="@+id/radio_D"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="D" />
+        </RadioGroup>
+
+
+        <Button
+            android:id="@+id/btn_adcionar"
+            android:layout_width="123dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_baseline_add_24"
+            android:drawableTint="@android:color/white"
+            android:text="Adicionar"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toTopOf="@+id/recyclerViewPerguntas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPerguntas"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/input_tempo_tarefa"
+            app:layout_constraintTop_toBottomOf="@+id/btn_adcionar"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_tempo_tarefa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_baseline_access_time_24"
+            android:drawablePadding="5dp"
+            android:hint="Segundos para realização do desafio"
+            android:inputType="time"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewPerguntas"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:inputType="date"
+            app:layout_constraintBottom_toTopOf="@+id/btn_proximo"
+            app:layout_constraintTop_toBottomOf="@+id/input_tempo_tarefa">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_data_inicio"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+                android:drawablePadding="5dp"
+                android:hint="Data início" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_hora_inicio"
+                android:layout_width="185dp"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:drawablePadding="5dp"
+                android:hint="Hora início" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_proximo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:background="@color/colorPrimary"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+            android:drawableTint="@android:color/white"
+            android:text="Próximo"
+            android:inputType="time"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

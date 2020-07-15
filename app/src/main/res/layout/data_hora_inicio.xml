@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+  <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/input_data_inicio"
+      android:layout_width="210dp"
+      android:layout_height="wrap_content"
+      android:hint="Data início"
+      android:drawableLeft="@drawable/ic_baseline_calendar_today_24"
+      android:drawablePadding="5dp"/>
+  <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/input_hora_inicio"
+      android:layout_width="210dp"
+      android:layout_height="wrap_content"
+      android:hint="Hora início"
+      android:drawableLeft="@drawable/ic_baseline_access_time_24"
+      android:drawablePadding="5dp"/>
+
+</LinearLayout>
