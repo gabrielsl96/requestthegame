@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
                     atualizarDadosUsuarioNaTela(usuario);
                     carregarDesafios(usuario);
                 }
+
                 else{
                     auth.signOut();
                     startActivity(new Intent(MainActivity.this,SplashScreenActivity.class));
@@ -317,7 +318,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onRestart() {
         super.onRestart();
-        stopService(intent);
-        startService(intent);
+        if(usuario.getTipoUsuario().equals("Desafiado")) {
+            stopService(intent);
+            startService(intent);
+        }
     }
 }

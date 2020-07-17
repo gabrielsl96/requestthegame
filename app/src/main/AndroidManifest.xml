@@ -22,7 +22,6 @@
             android:value="@string/api_key" />
 
         <service android:name=".Services.ServiceListenerDesafio"/>
-        <receiver android:name=".Broadcast.BroadcastListenerDesafioClosed"/>
 
         <activity android:name=".Activ.desafios.DesafioQuatroActivity" />
         <activity android:name=".Activ.desafios.DesafioTresActivity"/>

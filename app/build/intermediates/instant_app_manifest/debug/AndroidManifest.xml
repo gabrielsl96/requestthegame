@@ -41,8 +41,6 @@
 
         <service android:name="com.example.request_thegame.Services.ServiceListenerDesafio" />
 
-        <receiver android:name="com.example.request_thegame.Broadcast.BroadcastListenerDesafioClosed" />
-
         <activity android:name="com.example.request_thegame.Activ.desafios.DesafioQuatroActivity" />
         <activity android:name="com.example.request_thegame.Activ.desafios.DesafioTresActivity" />
         <activity android:name="com.example.request_thegame.Activ.desafios.DesafioDoisActivity" />
