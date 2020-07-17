@@ -5,15 +5,13 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.request_thegame.Frag.desafios.Bloqueios.BloqueadoFragment;
 import com.example.request_thegame.Frag.desafios.DesafioDoisFragment;
 import com.example.request_thegame.Frag.desafios.DesafioQuatroFragment;
 import com.example.request_thegame.Frag.desafios.DesafioTresFragment;
 import com.example.request_thegame.Frag.desafios.DesafioUmFragment;
 import com.example.request_thegame.Helper.ConfigFirebase;
-import com.example.request_thegame.Helper.ProgressBarLoad;
 import com.example.request_thegame.Interface.InterfacePainelDesafios;
 import com.example.request_thegame.Model.Desafio;
 import com.example.request_thegame.Model.Usuario;
@@ -39,11 +37,13 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafios);
-
+        usuario = (Usuario) getIntent().getExtras().getSerializable("usuario");
+        desafio = (Desafio) getIntent().getExtras().getSerializable("desafio");
 
         bottomNavigationView =(BottomNavigationView) findViewById(R.id.bottom_nav);
-
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
+
+        setItemSelectedNav();
 
     }
 
@@ -52,7 +52,6 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
         switch(item.getItemId()){
             case R.id.item_primeiro_desafio:
 
-                bottomNavigationView.setBackgroundColor(0XFFFFCB05);
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container_painel_desafios,new DesafioUmFragment())
@@ -61,7 +60,6 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
 
             case R.id.item_segundo_desafio:
 
-                bottomNavigationView.setBackgroundColor(0XFF612F74);
                     getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.container_painel_desafios,new DesafioDoisFragment())
@@ -69,7 +67,6 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
                 return true;
 
                 case R.id.item_terceiro_desafio:
-                    bottomNavigationView.setBackgroundColor(0XFFFFCB05);
                     getSupportFragmentManager()
                             .beginTransaction()
                             .replace(R.id.container_painel_desafios,new DesafioTresFragment())
@@ -77,7 +74,6 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
                     return true;
 
             case R.id.item_quarto_desafio:
-                bottomNavigationView.setBackgroundColor(0XFF612F74);
                 getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.container_painel_desafios,new DesafioQuatroFragment())
@@ -107,17 +103,13 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
     @Override
     protected void onResume() {
         super.onResume();
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_painel_desafios,new DesafioUmFragment()).commit();
-        usuario = (Usuario) getIntent().getExtras().getSerializable("usuario");
-        desafio = (Desafio) getIntent().getExtras().getSerializable("desafio");
+
         try{
             valueEventListener=new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if(desafio!=null){
-                        desafio = null;
                         desafio = snapshot.getValue(Desafio.class);
-                    }
+
                 }
 
                 @Override
@@ -137,6 +129,49 @@ public class PainelDesafiosActivity extends AppCompatActivity implements BottomN
         }
         catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        setItemSelectedNav();
+    }
+
+    private void setItemSelectedNav(){
+        if( desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
+                && !desafio.getStatusDesafios().getStatusDesafioDois().equals("Concluído")){
+            bottomNavigationView.getMenu().getItem(1).setChecked(true);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container_painel_desafios,new DesafioDoisFragment())
+                    .commitAllowingStateLoss();
+        }
+
+        else if( desafio.getStatusDesafios().getStatusDesafioDois().equals("Concluído")
+                && !desafio.getStatusDesafios().getStatusDesafioTres().equals("Concluído")){
+            bottomNavigationView.getMenu().getItem(2).setChecked(true);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container_painel_desafios,new DesafioTresFragment())
+                    .commitAllowingStateLoss();
+        }
+
+        else if(desafio.getStatusDesafios().getStatusDesafioTres().equals("Concluído")
+                && !desafio.getStatusDesafios().getStatusDesafioQuatro().equals("Concluído")){
+            bottomNavigationView.getMenu().getItem(3).setChecked(true);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container_painel_desafios,new DesafioQuatroFragment())
+                    .commitAllowingStateLoss();
+        }
+
+        else{
+            bottomNavigationView.getMenu().getItem(0).setChecked(true);
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.container_painel_desafios,new DesafioUmFragment())
+                    .commitAllowingStateLoss();
         }
     }
 }

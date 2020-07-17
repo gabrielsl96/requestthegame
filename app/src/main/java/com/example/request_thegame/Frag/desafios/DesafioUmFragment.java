@@ -1,5 +1,6 @@
 package com.example.request_thegame.Frag.desafios;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,17 +34,15 @@ public class DesafioUmFragment extends Fragment {
     private Button btnComecar;
     private DatabaseReference reference = ConfigFirebase.getDatabaseReference();
     private View view;
+    private Desafio desafio;
+    private Usuario usuario;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-
-
-
-            Log.d("Status","Abriu");
-           final Desafio desafio = painelDesafios.getDesafio();
-           final Usuario usuario = painelDesafios.getUsuario();
+            desafio = painelDesafios.getDesafio();
+           usuario = painelDesafios.getUsuario();
 
             if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Disponível")) {
                 view = inflater.inflate(R.layout.fragment_desafio_um, container, false);
@@ -67,7 +66,9 @@ public class DesafioUmFragment extends Fragment {
                         startActivity(intent);
                     }
                 });
-            } else if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")) {
+            }
+
+            else if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")) {
                 view = inflater.inflate(R.layout.fragment_concluido, container, false);
 
                 TextView textMensagemFinal = view.findViewById(R.id.text_mensagem_final);
@@ -79,7 +80,35 @@ public class DesafioUmFragment extends Fragment {
                 } else {
                     textMensagemFinal.setText(desafio.getMensagemFinal().getPrimeiraParte());
                 }
-            } else {
+            }
+
+            else if (desafio.getStatusDesafios().getStatusDesafioQuatro().equals("Concluído")){
+                view = inflater.inflate(R.layout.fragment_concluido, container, false);
+
+                AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
+
+
+                TextView textMensagemFinal = view.findViewById(R.id.text_mensagem_final);
+                TextView textTituloConcluido = view.findViewById(R.id.text_titulo_concluido);
+
+                textTituloConcluido.setText("Primeiro desafio concluído");
+                if (desafio.getMensagemFinal().getTipoMensagem().equals("Código Morse")) {
+                    textMensagemFinal.setText(TradutorCodigoMorse.getCodigoMorse(desafio.getMensagemFinal().getPrimeiraParte()));
+                    dialog.setTitle("Parabéns!")
+                            .setMessage("Você concluiu Request!\nDecifre a mensagem secreta!")
+                            .setCancelable(true);
+
+                } else {
+                    textMensagemFinal.setText(desafio.getMensagemFinal().getPrimeiraParte());
+                    dialog.setTitle("Parabéns!")
+                            .setMessage("Você concluiu Request!")
+                            .setCancelable(true);
+                }
+
+                dialog.create().show();
+            }
+
+            else {
                 view = inflater.inflate(R.layout.view_desafio_bloqueado, container, false);
             }
 

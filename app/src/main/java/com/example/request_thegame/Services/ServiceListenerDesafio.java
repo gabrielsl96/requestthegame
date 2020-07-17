@@ -1,23 +1,40 @@
 package com.example.request_thegame.Services;
 
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.app.NotificationCompat;
 
 import com.example.request_thegame.Helper.ConfigFirebase;
 import com.example.request_thegame.Model.Desafio;
 import com.example.request_thegame.R;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 
+import org.joda.time.DateTime;
+import org.joda.time.Duration;
+import org.joda.time.Hours;
+import org.joda.time.Interval;
+import org.joda.time.Seconds;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -27,11 +44,14 @@ public class ServiceListenerDesafio extends Service {
     private FirebaseAuth auth = ConfigFirebase.getFirebaseAuth();
     private String[] idDesafio;
     private Desafio desafio;
-    private boolean status;
-    private static String CHANNEL_ID;
-    private String[] dataDesafio,dataPrimeiro,dataSegundo,dataTerceiro,dataQuarto;
-    private String[] horaDesafio,horaPrimeiro,horaSegundo,horaTerceiro,horaQuarto;
-    private Calendar instanteAtual,inicioDesafio,inicioPrimeiro,inicioSegundo,inicioTerceiro,inicioQuarto;
+    private String CHANNEL_ID = "gabrielServiceListener";
+    private NotificationManager notificationManager;
+    private Context context;
+    private Timer timer;
+    private Notification.Builder builder;
+    private Date inicioDesafioUm, inicioDesafioDois, inicioDesafioTres, inicioDesafioQuatro;
+    private Calendar  calUm,calDois,calTres,calQuatro;
+    private SimpleDateFormat simpleDateFormat;
 
 
     @Nullable
@@ -43,7 +63,8 @@ public class ServiceListenerDesafio extends Service {
     @Override
     public int onStartCommand(final Intent intent, int flags, int startId) {
 
-
+        context = getBaseContext();
+        createNotificationChannel();
 
                     reference
                             .child("Usuários")
@@ -61,82 +82,69 @@ public class ServiceListenerDesafio extends Service {
                                                 @Override
                                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                                     desafio = snapshot.getValue(Desafio.class);
+                                                    if(timer!=null){
+                                                        timer.cancel();
+                                                        Log.d("Timer", "Parou!");
+                                                    }
 
                                                     Log.i("Serviço:", "Desafio baixado");
 
-                                                    Timer timer = new Timer();
+                                                    simpleDateFormat = new SimpleDateFormat("dd/MM/yyyyHH:mm");
+                                                    try {
+                                                        inicioDesafioUm=simpleDateFormat.parse(desafio.getPrimeiroDesafio().getDataInicio()+desafio.getPrimeiroDesafio().getHoraInicio());
+                                                        inicioDesafioDois=simpleDateFormat.parse(desafio.getSegundoDesafio().getDataInicio()+desafio.getSegundoDesafio().getHoraInicio());
+                                                        inicioDesafioTres=simpleDateFormat.parse(desafio.getTerceiroDesafio().getDataInicio()+desafio.getTerceiroDesafio().getHoraInicio());
+                                                        inicioDesafioQuatro=simpleDateFormat.parse(desafio.getQuartoDesafio().getDataInicio()+desafio.getQuartoDesafio().getHoraInicio());
+
+
+                                                    } catch (ParseException e) {
+                                                        e.printStackTrace();
+                                                    }
+
+                                                    timer = new Timer();
 
                                                     TimerTask timerTask = new TimerTask() {
                                                         @Override
                                                         public void run() {
                                                             Log.i("Serviço:", "Conferindo");
+
                                                             if(desafio!=null) {
 
-                                                                instanteAtual = Calendar.getInstance();
-                                                                inicioDesafio = Calendar.getInstance();
-                                                                inicioPrimeiro = Calendar.getInstance();
-                                                                inicioSegundo = Calendar.getInstance();
-                                                                inicioTerceiro = Calendar.getInstance();
-                                                                inicioQuarto = Calendar.getInstance();
+                                                                Calendar calendar = Calendar.getInstance();
+                                                                Date instante = calendar.getTime();
 
-                                                                dataDesafio = desafio.getInformacoesDesafio().getDataInicio().split("/");
-                                                                dataPrimeiro = desafio.getPrimeiroDesafio().getDataInicio().split("/");
-                                                                dataSegundo = desafio.getSegundoDesafio().getDataInicio().split("/");
-                                                                dataTerceiro = desafio.getTerceiroDesafio().getDataInicio().split("/");
-                                                                dataQuarto = desafio.getQuartoDesafio().getDataInicio().split("/");
+                                                                if (inicioDesafioUm.before(instante)
+                                                                && desafio.getStatusDesafios().getStatusDesafioUm().equals("Indisponível")) {
 
-                                                                horaDesafio = desafio.getInformacoesDesafio().getHoraInicio().split(":");
-                                                                horaPrimeiro = desafio.getPrimeiroDesafio().getHoraInicio().split(":");
-                                                                horaSegundo = desafio.getSegundoDesafio().getHoraInicio().split(":");
-                                                                horaTerceiro = desafio.getTerceiroDesafio().getHoraInicio().split(":");
-                                                                horaQuarto = desafio.getQuartoDesafio().getHoraInicio().split(":");
-
-
-                                                                inicioDesafio.set(Integer.parseInt(dataDesafio[2]),
-                                                                        Integer.parseInt(dataDesafio[1]),
-                                                                        Integer.parseInt(dataDesafio[0]),
-                                                                        Integer.parseInt(horaDesafio[0]),
-                                                                        Integer.parseInt(horaDesafio[1]));
-
-                                                                inicioPrimeiro.set(Integer.parseInt(dataPrimeiro[2]),
-                                                                        Integer.parseInt(dataPrimeiro[1]),
-                                                                        Integer.parseInt(dataPrimeiro[0]),
-                                                                        Integer.parseInt(horaPrimeiro[0]),
-                                                                        Integer.parseInt(horaPrimeiro[1]));
-
-                                                                inicioSegundo.set(Integer.parseInt(dataSegundo[2]),
-                                                                        Integer.parseInt(dataSegundo[1]),
-                                                                        Integer.parseInt(dataSegundo[0]),
-                                                                        Integer.parseInt(horaSegundo[0]),
-                                                                        Integer.parseInt(horaSegundo[1]));
-
-                                                                inicioTerceiro.set(Integer.parseInt(dataTerceiro[2]),
-                                                                        Integer.parseInt(dataTerceiro[1]),
-                                                                        Integer.parseInt(dataTerceiro[0]),
-                                                                        Integer.parseInt(horaTerceiro[0]),
-                                                                        Integer.parseInt(horaTerceiro[1]));
-
-                                                                inicioQuarto.set(Integer.parseInt(dataQuarto[2]),
-                                                                        Integer.parseInt(dataQuarto[1]),
-                                                                        Integer.parseInt(dataQuarto[0]),
-                                                                        Integer.parseInt(horaQuarto[0]),
-                                                                        Integer.parseInt(horaQuarto[1]));
-
-                                                                CHANNEL_ID = getString(R.string.common_google_play_services_notification_channel_name);
-
-                                                                if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Indisponível")
-                                                                        && inicioPrimeiro.after(instanteAtual)) {
+                                                                    builder = new Notification.Builder(context, CHANNEL_ID)
+                                                                            .setSmallIcon(R.drawable.joystick)
+                                                                            .setContentTitle("Desafio um")
+                                                                            .setContentText("Desbloqueado!")
+                                                                            .setAutoCancel(true);
                                                                     reference
                                                                             .child("Desafios")
                                                                             .child(idDesafio[0])
                                                                             .child(idDesafio[1])
                                                                             .child("statusDesafios")
                                                                             .child("statusDesafioUm")
-                                                                            .setValue("Disponível");
+                                                                            .setValue("Disponível").addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                        @Override
+                                                                        public void onSuccess(Void aVoid) {
+                                                                           notificationManager.notify(0,builder.build());
+                                                                        }
+                                                                    });
 
-                                                                } else if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
-                                                                        && desafio.getStatusDesafios().getStatusDesafioDois().equals("Indisponível")
-                                                                        && inicioSegundo.after(instanteAtual)) {
+                                                                }
+
+                                                                else if (inicioDesafioDois.before(instante) &&
+                                                                        desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
+                                                                        && desafio.getStatusDesafios().getStatusDesafioDois().equals("Indisponível")) {
+
+                                                                    builder = new Notification.Builder(context, CHANNEL_ID)
+                                                                            .setSmallIcon(R.drawable.joystick)
+                                                                            .setContentTitle("Desafio Dois")
+                                                                            .setContentText("Desbloqueado!")
+                                                                            .setAutoCancel(true);
 
                                                                     reference
                                                                             .child("Desafios")
@@ -144,23 +152,55 @@ public class ServiceListenerDesafio extends Service {
                                                                             .child(idDesafio[1])
                                                                             .child("statusDesafios")
                                                                             .child("statusDesafioDois")
-                                                                            .setValue("Disponível");
-                                                                } else if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
+                                                                            .setValue("Disponível")
+                                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                @Override
+                                                                                public void onSuccess(Void aVoid) {
+                                                                                    notificationManager.notify(0,builder.build());
+                                                                                }
+                                                                            });
+
+
+                                                                }
+
+                                                                else if (inicioDesafioTres.before(instante)
+                                                                && desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
                                                                         && desafio.getStatusDesafios().getStatusDesafioDois().equals("Concluído")
-                                                                        && desafio.getStatusDesafios().getStatusDesafioTres().equals("Indisponível")
-                                                                        && inicioTerceiro.after(instanteAtual)) {
+                                                                        && desafio.getStatusDesafios().getStatusDesafioTres().equals("Indisponível")) {
+
+                                                                    builder = new Notification.Builder(context, CHANNEL_ID)
+                                                                            .setSmallIcon(R.drawable.joystick)
+                                                                            .setContentTitle("Desafio Três")
+                                                                            .setContentText("Desbloqueado!")
+                                                                            .setAutoCancel(true);
+
                                                                     reference
                                                                             .child("Desafios")
                                                                             .child(idDesafio[0])
                                                                             .child(idDesafio[1])
                                                                             .child("statusDesafios")
                                                                             .child("statusDesafioTres")
-                                                                            .setValue("Disponível");
-                                                                } else if (desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
+                                                                            .setValue("Disponível")
+                                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                @Override
+                                                                                public void onSuccess(Void aVoid) {
+                                                                                    notificationManager.notify(0,builder.build());
+                                                                                }
+                                                                            });
+
+                                                                }
+
+                                                                else if (inicioDesafioQuatro.before(instante)
+                                                                && desafio.getStatusDesafios().getStatusDesafioUm().equals("Concluído")
                                                                         && desafio.getStatusDesafios().getStatusDesafioDois().equals("Concluído")
                                                                         && desafio.getStatusDesafios().getStatusDesafioTres().equals("Concluído")
-                                                                        && desafio.getStatusDesafios().getStatusDesafioQuatro().equals("Indisponível")
-                                                                        && inicioQuarto.after(instanteAtual)) {
+                                                                        && desafio.getStatusDesafios().getStatusDesafioQuatro().equals("Indisponível")) {
+
+                                                                    builder = new Notification.Builder(context, CHANNEL_ID)
+                                                                            .setSmallIcon(R.drawable.joystick)
+                                                                            .setContentTitle("Desafio Quatro")
+                                                                            .setContentText("Desbloqueado!")
+                                                                            .setAutoCancel(true);
 
                                                                     reference
                                                                             .child("Desafios")
@@ -168,13 +208,18 @@ public class ServiceListenerDesafio extends Service {
                                                                             .child(idDesafio[1])
                                                                             .child("statusDesafios")
                                                                             .child("statusDesafioQuatro")
-                                                                            .setValue("Disponível");
+                                                                            .setValue("Disponível")
+                                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                                @Override
+                                                                                public void onSuccess(Void aVoid) {
+                                                                                    notificationManager.notify(0,builder.build());
+                                                                                }
+                                                                            });
                                                                 }
-
                                                             }
                                                         }
                                                     };
-                                                    timer.scheduleAtFixedRate(timerTask,1000,1000);
+                                                    timer.scheduleAtFixedRate(timerTask,0,3000);
                                                 }
 
                                                 @Override
@@ -198,5 +243,18 @@ public class ServiceListenerDesafio extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        timer.cancel();
+    }
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "ListenerDesafios";
+            String description = "Esse é o canal do Service Listener";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, name, importance);
+            channel.setDescription(description);
+            notificationManager = context.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 }

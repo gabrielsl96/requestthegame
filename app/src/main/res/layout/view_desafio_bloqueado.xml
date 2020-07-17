@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99999999">
+    android:background="@color/colorPrimary">
 
 
     <androidx.cardview.widget.CardView
@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="Desafio bloqueado!"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/text_mensagem_final"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,6 +49,7 @@
         android:layout_height="wrap_content"
         android:text="O desafio pode começar\n a qualquer momento!\n Aguarde!"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

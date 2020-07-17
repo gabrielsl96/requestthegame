@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#99999999">
+    android:background="@color/colorPrimary">
 
 
     <androidx.cardview.widget.CardView
@@ -13,7 +13,7 @@
         android:layout_height="125dp"
         android:layout_marginBottom="64dp"
         app:cardBackgroundColor="@android:color/holo_red_dark"
-        app:cardCornerRadius="70dp"
+        app:cardCornerRadius="50dp"
         app:layout_constraintBottom_toTopOf="@+id/textView29"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -35,6 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
         android:text="Desafio bloqueado!"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/textView31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -48,6 +49,7 @@
         android:layout_height="wrap_content"
         android:text="Complete o desafio anterior\n e aguarde o início desse desafio!"
         android:textAlignment="center"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

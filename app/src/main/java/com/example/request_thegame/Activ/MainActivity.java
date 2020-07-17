@@ -2,10 +2,11 @@ package com.example.request_thegame.Activ;
 
 import android.app.Dialog;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.Network;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -13,13 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.example.request_thegame.Adapter.DesafiosAdapter;
 import com.example.request_thegame.Helper.ConfigFirebase;
@@ -36,10 +35,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.StorageReference;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,17 +54,21 @@ public class MainActivity extends AppCompatActivity {
     private static FirebaseAuth auth = ConfigFirebase.getFirebaseAuth();
     private ValueEventListener valueEventListener, valueEventListenerUsuario;
     private Toolbar toolbar;
-    private boolean usuarioDesafiante=false;
+    private Runnable runnable;
+    private Handler handler;
     private LinearLayoutManager layoutManager;
     private Intent intent;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         intent = new Intent(MainActivity.this,ServiceListenerDesafio.class);
+
+
         //Setando os componentes da tela
         nomeUsuario = findViewById(R.id.text_nomeUsuario);
         imageUsuario = findViewById(R.id.img_usuario);
@@ -75,7 +76,31 @@ public class MainActivity extends AppCompatActivity {
         btnCriarDesafio=findViewById(R.id.btn_criarDesafio);
         toolbar = findViewById(R.id.tootlbar_main);
 
+        load = new ProgressBarLoad(this,dialog);
+        load.iniciar();
 
+
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                if(desafiosList.size()!=0){
+
+                    if(usuario.getTipoUsuario().equals("Desafiado")) {
+                        load.finalizar();
+                        startService(intent);
+                        handler.removeCallbacks(runnable);
+                    }
+                    else if(usuario.getTipoUsuario().equals("Desafiante")){
+                        handler.removeCallbacks(runnable);
+                    }
+                }
+                else{
+                    handler.postDelayed(runnable,1000);
+                }
+            }
+        };
+        handler=new Handler();
+        runOnUiThread(runnable);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
@@ -83,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(MainActivity.this);
 
 
-        load = new ProgressBarLoad(this,dialog);
+
 
 
         //Botão para abrir activity de criar desafios
@@ -97,7 +122,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void carregarDadosUsuario(){
-        load.iniciar();
+
 
         valueEventListenerUsuario=new ValueEventListener() {
             @Override
@@ -105,11 +130,17 @@ public class MainActivity extends AppCompatActivity {
 
 
                 usuario = dataSnapshot.getValue(Usuario.class);
-                usuario.setIdUsuario(auth.getUid());
+
 
                 if(usuario!=null){
+                    usuario.setIdUsuario(auth.getUid());
                     atualizarDadosUsuarioNaTela(usuario);
                     carregarDesafios(usuario);
+                }
+                else{
+                    auth.signOut();
+                    startActivity(new Intent(MainActivity.this,SplashScreenActivity.class));
+                    finish();
                 }
 
             }
@@ -207,7 +238,6 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     desafiosList.clear();
-                    load.finalizar();
                     Desafio desa = dataSnapshot.getValue(Desafio.class);
 
                     desafiosList.add(desa);
@@ -277,22 +307,17 @@ public class MainActivity extends AppCompatActivity {
 
         carregarDadosUsuario();
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                if(usuario.getTipoUsuario().equals("Desafiado")){
-                    startService(intent);
-                }
-            }
-        }, 5000);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
+    }
 
-        Log.i("Fechou","Fechado");
-
-
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        stopService(intent);
+        startService(intent);
     }
 }

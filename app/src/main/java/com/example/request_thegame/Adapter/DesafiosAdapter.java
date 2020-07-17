@@ -176,11 +176,12 @@ public class DesafiosAdapter extends RecyclerView.Adapter<DesafiosAdapter.MyView
 
 
         if(textoStatus.equals("Executando primeiro desafio")){
-            holder.progressBarDesafioUm.setProgress(100,true);
+            holder.progressBarDesafioUm.setProgress(100,false);
             holder.progressBarDesafioDois.getProgressDrawable().setTint(Color.YELLOW);
         }
 
-        else if(textoStatus.equals("Concluído primeiro desafio")){
+        else if(textoStatus.equals("Concluído primeiro desafio") ||
+                textoStatus.equals("Desafio dois disponível!") ){
             holder.progressBarDesafioUm.setProgress(100,false);
             holder.progressBarDesafioUm.getProgressDrawable().setTint(Color.GREEN);
 
@@ -190,11 +191,12 @@ public class DesafiosAdapter extends RecyclerView.Adapter<DesafiosAdapter.MyView
             holder.progressBarDesafioUm.setProgress(100,false);
             holder.progressBarDesafioUm.getProgressDrawable().setTint(Color.GREEN);
 
-            holder.progressBarDesafioDois.setProgress(100,true);
+            holder.progressBarDesafioDois.setProgress(100,false);
             holder.progressBarDesafioDois.getProgressDrawable().setTint(Color.YELLOW);
         }
 
-        else if(textoStatus.equals("Concluído segundo desafio")){
+        else if(textoStatus.equals("Concluído segundo desafio")||
+                textoStatus.equals("Desafio três disponível!")){
             holder.progressBarDesafioUm.setProgress(100,false);
             holder.progressBarDesafioUm.getProgressDrawable().setTint(Color.GREEN);
 
@@ -209,11 +211,12 @@ public class DesafiosAdapter extends RecyclerView.Adapter<DesafiosAdapter.MyView
             holder.progressBarDesafioDois.setProgress(100,false);
             holder.progressBarDesafioDois.getProgressDrawable().setTint(Color.GREEN);
 
-            holder.progressBarDesafioTres.setProgress(100,true);
+            holder.progressBarDesafioTres.setProgress(100,false);
             holder.progressBarDesafioTres.getProgressDrawable().setTint(Color.YELLOW);
         }
 
-        else if(textoStatus.equals("Concluído terceiro desafio")){
+        else if(textoStatus.equals("Concluído terceiro desafio")||
+                textoStatus.equals("Desafio quatro disponível!")){
             holder.progressBarDesafioUm.setProgress(100,false);
             holder.progressBarDesafioUm.getProgressDrawable().setTint(Color.GREEN);
 
@@ -234,7 +237,7 @@ public class DesafiosAdapter extends RecyclerView.Adapter<DesafiosAdapter.MyView
             holder.progressBarDesafioTres.setProgress(100,false);
             holder.progressBarDesafioTres.getProgressDrawable().setTint(Color.GREEN);
 
-            holder.progressBarDesafioQuatro.setProgress(100,true);
+            holder.progressBarDesafioQuatro.setProgress(100,false);
             holder.progressBarDesafioQuatro.getProgressDrawable().setTint(Color.YELLOW);
         }
 

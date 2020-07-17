@@ -1,15 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login_desafiante.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_login_desafiante.xml"
-    },
-    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login_usuario.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_login_usuario.xml"
     },
     {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dias_dois.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_dias_dois.xml"
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bloqueio_temporario.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_bloqueio_temporario.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio_tres.xml.flat",
@@ -24,6 +20,10 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_concluido.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_dois.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_dois.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -34,182 +34,6 @@
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cadastro_desafiante.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_cadastro_desafiante.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_email_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_login.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login_desafiado.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_login_desafiado.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_card_button.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\background_card_button.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_baseline_lock_white_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable-v24\\ic_baseline_lock_white_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_segundo_desafio.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_segundo_desafio.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_calendar_today_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_calendar_today_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_access_time_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_access_time_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_tipo_usuario.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_tipo_usuario.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_criar_desafios.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_criar_desafios.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cadastro_desafiado.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_cadastro_desafiado.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafios.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafios.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_question_answer_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_question_answer_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dia_um.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_dia_um.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_criar_informacoes_desafio.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_criar_informacoes_desafio.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio_um.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafio_um.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_exit_to_app_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_exit_to_app_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_estatisticas.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_estatisticas.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_principal_activity.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\menu\\menu_principal_activity.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_check_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_check_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_camera_alt_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_camera_alt_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_desafio_bloqueado.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\view_desafio_bloqueado.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_um.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_um.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio_quatro.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafio_quatro.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafiante_codigo.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafiante_codigo.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_style_background.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\style_background.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_data_hora_inicio.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\data_hora_inicio.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_desafios.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\cardview_desafios.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_splash.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\background_splash.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_cardview_desafio.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\menu\\menu_cardview_desafio.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_place_24.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_place_24.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_quatro.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_quatro.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_codigo_desafiado.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_codigo_desafiado.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dia_dois_quiz.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_dia_dois_quiz.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_bloqueio_temporario.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_bloqueio_temporario.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_dois.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_dois.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_share_24.xml.flat",
@@ -224,6 +48,10 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\view_desafio_bloqueado_anterior.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_email_24.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_24.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_add_24.xml"
     },
@@ -232,12 +60,16 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_criar_codigo_desafio.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_login.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dia_tres.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_dia_tres.xml"
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_card_button.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\background_card_button.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_login.xml.flat",
@@ -256,8 +88,24 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_home_black_24dp.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_baseline_lock_white_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable-v24\\ic_baseline_lock_white_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_segundo_desafio.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_segundo_desafio.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_calendar_today_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_calendar_today_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_access_time_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_access_time_24.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_notifications_black_24dp.xml.flat",
@@ -280,24 +128,36 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_mensagem_final.xml"
     },
     {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_dias_quatro.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_dias_quatro.xml"
-    },
-    {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_foto_user.jpg.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable-v24\\foto_user.jpg"
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_criar_desafios.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_criar_desafios.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_cadastrar_usuario.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_cadastrar_usuario.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_foto_user.jpg.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable-v24\\foto_user.jpg"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafios.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafios.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_question_answer_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_question_answer_24.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_image_24.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_image_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_directions_run_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_directions_run_24.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
@@ -310,6 +170,10 @@
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_desafios_activity.xml.flat",
@@ -332,12 +196,32 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_bloqueado.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_criar_informacoes_desafio.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_criar_informacoes_desafio.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_search_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio_um.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafio_um.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_perguntas.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\cardview_perguntas.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_primeiro_acesso.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_primeiro_acesso.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_exit_to_app_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_exit_to_app_24.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_person_24.xml.flat",
@@ -348,6 +232,10 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_principal_activity.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\menu\\menu_principal_activity.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_tela_apresenta_codigo.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_tela_apresenta_codigo.xml"
     },
@@ -356,16 +244,48 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafio_dois.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_check_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_check_24.xml"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_lock_24.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_lock_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_tres.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_tres.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_camera_alt_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_camera_alt_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_desafio_bloqueado.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\view_desafio_bloqueado.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_um.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_um.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_desafio_quatro.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\activity_desafio_quatro.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_view_executando.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\view_executando.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_file_copy_24.xml.flat",
@@ -376,12 +296,44 @@
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_forward_24.xml"
     },
     {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_cardview_desafios.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\cardview_desafios.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_style_background.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\style_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background_splash.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\background_splash.png"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\menu_menu_cardview_desafio.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\menu\\menu_cardview_desafio.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_place_24.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\drawable\\ic_baseline_place_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_desafio_quatro.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_desafio_quatro.xml"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_terceiro_desafio.xml.flat",
         "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_terceiro_desafio.xml"
     },
     {
-        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_blank.xml.flat",
-        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_blank.xml"
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_codigo_desafiado.xml.flat",
+        "source": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\src\\main\\res\\layout\\fragment_codigo_desafiado.xml"
     },
     {
         "merged": "C:\\Users\\gsous\\AndroidStudioProjects\\RequestTheGame\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",

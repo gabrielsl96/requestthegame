@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity implements InterfaceCadastr
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        getSupportFragmentManager().beginTransaction().replace(R.id.container_login,new LoginUsuarioFragment()).addToBackStack("Tipo usuario").commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_login,new LoginUsuarioFragment()).commit();
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 
     }

@@ -70,40 +70,47 @@ public class CodigoDesafiadoFragment extends Fragment {
 
         String[] codigoDesafio = inputCodigo.split("/");
 
-        final ProgressBarLoad progressBarLoad = new ProgressBarLoad(getContext(),dialog);
-        progressBarLoad.iniciar();
-        reference = ConfigFirebase.getDatabaseReference();
-        reference.child("Desafios")
-                .child(codigoDesafio[0])
-                .child(codigoDesafio[1])
-                .addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-                            progressBarLoad.finalizar();
+        if(codigoDesafio.length==2) {
+            final ProgressBarLoad progressBarLoad = new ProgressBarLoad(getContext(), dialog);
+            progressBarLoad.iniciar();
+            reference = ConfigFirebase.getDatabaseReference();
+            reference.child("Desafios")
+                    .child(codigoDesafio[0])
+                    .child(codigoDesafio[1])
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                progressBarLoad.finalizar();
 
-                            interfaceCadastroUsuario.setDesafios(inputCodigo);
-                            getParentFragmentManager().popBackStack();
-                            getParentFragmentManager()
-                                    .beginTransaction()
-                                    .replace(R.id.container_login,new CaptarFotoFragment())
-                                    .commit();
+                                interfaceCadastroUsuario.setDesafios(inputCodigo);
+                                getParentFragmentManager().popBackStack();
+                                getParentFragmentManager()
+                                        .beginTransaction()
+                                        .replace(R.id.container_login, new CaptarFotoFragment())
+                                        .commit();
+                            } else {
+                                progressBarLoad.finalizar();
+                                Toast.makeText(getContext(),
+                                        "Código inválido! Tente novamente ou contate o desafiante!",
+                                        Toast.LENGTH_LONG).show();
+                            }
                         }
-                        else{
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
                             Toast.makeText(getContext(),
-                                    "Código inválido! Tente novamente ou contate o desafiante!",
+                                    databaseError.getMessage(),
                                     Toast.LENGTH_LONG).show();
+
                         }
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(getContext(),
-                                databaseError.getMessage(),
-                                Toast.LENGTH_LONG).show();
-
-                    }
-                });
+                    });
+        }
+        else {
+            Toast.makeText(getContext(),
+                    "Código inválido!",
+                    Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

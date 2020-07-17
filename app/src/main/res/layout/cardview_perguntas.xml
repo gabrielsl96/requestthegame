@@ -5,14 +5,15 @@
     android:layout_height="60dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="@android:color/white"
-    app:cardCornerRadius="20dp">
+    app:cardCornerRadius="5dp"
+    android:layout_marginBottom="4dp">
 
     <TextView
         android:id="@+id/pergunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Pergunta"
-        android:textSize="20dp"
+        android:textSize="16sp"
         android:layout_gravity="center"
         android:textColor="@color/design_default_color_primary"/>
 

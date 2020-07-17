@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.request_thegame.Activ.desafios.DesafioDoisActivity;
 import com.example.request_thegame.Helper.ConfigFirebase;
+import com.example.request_thegame.Helper.TradutorCodigoMorse;
 import com.example.request_thegame.Interface.InterfacePainelDesafios;
 import com.example.request_thegame.Model.Desafio;
 import com.example.request_thegame.Model.Usuario;
@@ -35,6 +36,7 @@ public class DesafioDoisFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         desafio=painelDesafios.getDesafio();
         usuario=painelDesafios.getUsuario();
 
@@ -49,7 +51,18 @@ public class DesafioDoisFragment extends Fragment {
         }
 
         else if(desafio.getStatusDesafios().getStatusDesafioDois().equals("Concluído")){
-        //    getParentFragmentManager().beginTransaction().replace(R.id.container_painel_desafios,new ConcluidoDesafioDoisFragmen()).commit();
+            view = inflater.inflate(R.layout.fragment_concluido,container,false);
+
+            TextView textMensagemFinal = view.findViewById(R.id.text_mensagem_final);
+            TextView textTituloConcluido = view.findViewById(R.id.text_titulo_concluido);
+
+            textTituloConcluido.setText("Segundo desafio concluído");
+
+            if (desafio.getMensagemFinal().getTipoMensagem().equals("Código Morse")) {
+                textMensagemFinal.setText(TradutorCodigoMorse.getCodigoMorse(desafio.getMensagemFinal().getSegundaParte()));
+            } else {
+                textMensagemFinal.setText(desafio.getMensagemFinal().getSegundaParte());
+            }
         }
 
         else{

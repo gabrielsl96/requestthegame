@@ -4,6 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.desafios.DesafioTresActivity">
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    tools:context=".Activ.desafios.DesafioTresActivity">
+
+    <TextView
+        android:id="@+id/text_charada_tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="128dp"
+        android:textAlignment="center"
+        android:textSize="@dimen/titulo_fragment_criar_desafios"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/input_charada_tres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/input_charada_tres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:drawableLeft="@drawable/ic_baseline_question_answer_24"
+        android:drawablePadding="5dp"
+        android:hint="Resposta"
+        android:inputType="textShortMessage"
+        app:layout_constraintBottom_toTopOf="@+id/btn_responder_tres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_charada_tres" />
+
+    <Button
+        android:id="@+id/btn_responder_tres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Responder"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_charada_tres" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
