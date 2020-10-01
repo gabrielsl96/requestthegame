@@ -13,7 +13,9 @@ Ao concluir cada desafio, o desafiado terá acesso a um pedaço da mensagem secr
 
 3 e 4º - São desafios do tipo caça ao tesouro, onde o desafiado devrá responder uma charada para liberar o trajeto até o "tesouro". 
 
-## Tecnologias utilizada
-* Firebase
-* Maps SDK for Android
-* 
+## Tecnologias utilizadas
+* Firebase : Database, Storage e Authentication
+* Maps SDK for Android : Maps e Location
+
+## Como usar
+Crie um projeto no Firebase e instale as dependencias no projeto do aplicativo.
