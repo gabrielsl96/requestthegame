@@ -2,6 +2,8 @@
 Versão 1.0 - 2020
 
 <img src="https://user-images.githubusercontent.com/49005645/114953528-f6b9fb80-9e2e-11eb-8c53-e5664c7c9c22.jpg" height=450>
+<img src="https://user-images.githubusercontent.com/49005645/114954240-7c8a7680-9e30-11eb-934d-ae74ad0ba0eb.jpg" height=450>
+<img src="https://user-images.githubusercontent.com/49005645/114954280-92983700-9e30-11eb-9351-af850be5cba3.jpg" height=450>
 
 ## Sobre
 O app foi criado para desenvolver, aprimorar e testar minhas habilidades com programação em Java e Firebase, além de pedir a minha namorada em casamento. (Ela disse sim! rsrs)
