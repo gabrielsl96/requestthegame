@@ -1,6 +1,6 @@
 # Request - The Game
 Versão 1.0 - 2020
-<img src="https://user-images.githubusercontent.com/49005645/114953528-f6b9fb80-9e2e-11eb-8c53-e5664c7c9c22.jpg" height=300>
+<img src="https://user-images.githubusercontent.com/49005645/114953528-f6b9fb80-9e2e-11eb-8c53-e5664c7c9c22.jpg" height=450>
 
 ## Sobre
 O app foi criado para desenvolver, aprimorar e testar minhas habilidades com programação em Java e Firebase, além de pedir a minha namorada em casamento. (Ela disse sim! rsrs)
